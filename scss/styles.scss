@@ -1,0 +1,151 @@
+@use './mixins' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+h2, h3, p {
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+
+.wrapper {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.service {
+  position: relative;
+  padding-bottom: 60px;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+    height: 10px;
+    background: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+    height: 10px;
+    background: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
+  }
+}
+
+.link {
+  display: flex;
+  &::after {
+    display: flex;
+    content: url('../images/services_blue.svg');
+    height: 14px;
+    align-items: center;
+    margin-left: 5px;
+  }
+  &:hover::after {
+    display: flex;
+    content: url('../images/services_red.svg');
+    height: 14px;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  &_title {
+    display: flex;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24A3FF;
+    @include font (700, 14, 14);
+  }
+  &_title:hover {
+    color: red;
+  }
+}
+
+.service_link {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+  @include font(700, 30, 37);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  // text-fill-color: transparent;
+}
+
+.block {
+  &__icon {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    &--ecommers {
+      @include cover("../icons/Ecommerce.svg");
+      margin-bottom: 30px;
+    }
+    &--support {
+      @include cover("../icons/Support.svg");
+      margin-bottom: 30px;
+    }
+    &--corporate {
+      @include cover("../icons/Corporate.svg");
+      margin-bottom: 30px;
+    }
+    &--trust {
+      @include cover("../icons/Trust.svg");
+      margin-bottom: 30px;
+    }
+    &--protection {
+      @include cover("../icons/Protection.svg");
+      margin-bottom: 30px;
+    }
+    &--contr {
+      @include cover("../icons/Contr.svg");
+      margin-bottom: 30px;
+    }
+  }  
+  &__title {
+    @include font(700, 22,27);
+    color: #24A3FF;
+    margin-bottom: 15px;
+  }
+  &__description {
+    @include font(400, 16, 26);
+    color: #FFFFFF;
+  }
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+// .service__block {
+//   margin-bottom: 30px;
+//   &:last-child {
+//     margin-bottom: 0px;
+//   }
+// }
+

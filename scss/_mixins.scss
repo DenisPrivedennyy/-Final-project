@@ -1,0 +1,20 @@
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  @if ($fs>0) {
+  font-size: $fs * 1px;
+  } @else {
+    font-size: 1px;
+    }  
+  @if ($fs>$lh) {
+  line-height: $fs *1px;
+  } @else {
+    line-height: $lh * 1px;
+  }  
+}
+
+@mixin cover($url) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("#{$url}");
+}

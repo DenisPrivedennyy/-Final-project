@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+h2, h3, p {
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.service {
+  position: relative;
+  padding-bottom: 60px;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+}
+.service::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: -10px;
+  height: 10px;
+  background: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+}
+.service::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: -20px;
+  height: 10px;
+  background: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.link {
+  display: flex;
+}
+.link::after {
+  display: flex;
+  content: url("../images/services_blue.svg");
+  height: 14px;
+  align-items: center;
+  margin-left: 5px;
+}
+.link:hover::after {
+  display: flex;
+  content: url("../images/services_red.svg");
+  height: 14px;
+  align-items: center;
+  margin-left: 5px;
+}
+.link_title {
+  display: flex;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+}
+.link_title:hover {
+  color: red;
+}
+
+.service_link {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.block__icon {
+  display: inline-block;
+  width: 92px;
+  height: 92px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+.block__icon--ecommers {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Ecommerce.svg");
+  margin-bottom: 30px;
+}
+.block__icon--support {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Support.svg");
+  margin-bottom: 30px;
+}
+.block__icon--corporate {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Corporate.svg");
+  margin-bottom: 30px;
+}
+.block__icon--trust {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Trust.svg");
+  margin-bottom: 30px;
+}
+.block__icon--protection {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Protection.svg");
+  margin-bottom: 30px;
+}
+.block__icon--contr {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../icons/Contr.svg");
+  margin-bottom: 30px;
+}
+.block__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+  margin-bottom: 15px;
+}
+.block__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
