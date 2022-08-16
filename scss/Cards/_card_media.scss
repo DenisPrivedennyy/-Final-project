@@ -1,0 +1,10 @@
+  @media (min-width: 768px) {
+    .card {
+      width: calc(50% - 30px);
+    }
+  }
+  @media (min-width: 1024px) {
+    .card {
+    width: calc(33.33% - 40px);
+    }
+  }

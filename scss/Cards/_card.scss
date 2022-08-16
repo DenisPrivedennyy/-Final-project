@@ -1,0 +1,50 @@
+@use './mixins' as *;
+
+.card {
+  &__icon {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    &--ecommers {
+      @include cover("../icons/Ecommerce.svg");
+      margin-bottom: 30px;
+    }
+    &--support {
+      @include cover("../icons/Support.svg");
+      margin-bottom: 30px;
+    }
+    &--corporate {
+      @include cover("../icons/Corporate.svg");
+      margin-bottom: 30px;
+    }
+    &--trust {
+      @include cover("../icons/Trust.svg");
+      margin-bottom: 30px;
+    }
+    &--protection {
+      @include cover("../icons/Protection.svg");
+      margin-bottom: 30px;
+    }
+    &--contr {
+      @include cover("../icons/Contr.svg");
+      margin-bottom: 30px;
+    }
+  }  
+  &__title {
+    @include font(700, 22,27);
+    color: #24A3FF;
+    margin-bottom: 15px;
+  }
+  &__description {
+    @include font(400, 16, 26);
+    color: #FFFFFF;
+  }
+  // @media (min-width: 768px) {
+  //   width: calc(50% - 30px);
+  // }
+  // @media (min-width: 1024px) {
+  //   width: calc(33.33% - 40px);
+  // }
+}
