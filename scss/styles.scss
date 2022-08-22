@@ -1,3 +1,5 @@
+@use './mixins' as *;
+
 @import './stylesheet';
 @import './Sections/service';
 @import './Sections/logoTable';
@@ -20,7 +22,6 @@ body {
   margin: 0;
 }
 
-
 .wrapper {
   padding-left: 30px;
   padding-right: 30px;
@@ -38,235 +39,201 @@ body {
   }
 }
 
-// .service {
-//   margin-bottom: 50px;
-//   position: relative;
-//   padding-bottom: 60px;
-//   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-//   border-radius: 0px 0px 12px 12px;
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     left: 20px;
-//     right: 20px;
-//     bottom: -10px;
-//     height: 10px;
-//     background: #CACADB;
-//     border-radius: 0px 0px 12px 12px;
-//   }
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     left: 40px;
-//     right: 40px;
-//     bottom: -20px;
-//     height: 10px;
-//     background: #E7E7F2;
-//     border-radius: 0px 0px 12px 12px;
-//   }
-// }
+.team {
+  margin-bottom: 106px;
+}
 
-// .link {
-//   display: flex;
-//   color: #24A3FF;
-//   &::after {
-//     display: flex;
-//     content: url('../images/services_blue.svg');
-//     height: 14px;
-//     align-items: center;
-//     margin-left: 5px;
-//   }
-//   &:hover {
-//     color: red;
-//   }
-//   &:hover::after {
-//     display: flex;
-//     content: url('../images/services_red.svg');
-//     height: 14px;
-//     align-items: center;
-//     margin-left: 5px;
-//   }
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    width: 648px;
+  }
+  @media (min-width: 1024px) {
+    width: 904px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1440px) {
+    width: 1600px;
+  }
+}
 
-//   &_title {
-//     display: flex;
-//     letter-spacing: 1px;
-//     text-transform: uppercase;
-//     @include font (700, 14, 14);
-//   }
-// }
+.team_img1 {
+  max-width: 648px;
+  height: 500px;
+  background-image: url('../fotos/Team-Tiny.jpg');
+  border-radius: 12px 12px 0px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 768px) {
+    width: 648px;
+  }
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 528px;
+    border-radius: 12px 0px 0px 12px;
+  }
+  @media (min-width: 1440px) {
+    height: 344px;
+  }
+  @media (min-width: 1920px) {
+    height: 298px;    
+  }
+}
 
-// .service_link {
-//   margin-bottom: 20px;
-// }
+.team_container {
+  background: #F5F5FA;
+  border-radius: 0 0 12px 12px;
+  padding: 30px;
+  max-width: 648px;
+  @media (min-width: 1024px) {
+    width: 504px;
+    border-radius: 0px 12px 12px 0px;
+  }
+  @media (min-width: 1440px) {
+    min-width: 920px;
+  }
+  @media (min-width: 1920px) {
+    min-width: 1200px;
+  }
+}
 
-// .service_title {
-//   margin-bottom: 30px;
-//   @include font(700, 30, 37);
-//   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   background-clip: text;
-// }
+.team_link {
+  margin-bottom: 5px;
+  display: flex;
+  color: #24A3FF;
+  @include font (700, 14, 17);
+  svg {
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  &:hover {
+    color: red;
+  }
+  &:hover path {
+    stroke: red;
+  }
+}
 
-// .cards {
-//   display: flex;
-//   flex-direction: column;
-//   row-gap: 30px;
-//   @media (min-width: 768px) {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     gap: 60px;
-//   }
-// }
+.team_description {
+  margin-bottom: 30px;
+  @include font (700, 38, 46);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
-// .card {
-//   &__icon {
-//     display: inline-block;
-//     width: 92px;
-//     height: 92px;
-//     background: #FFFFFF;
-//     border-radius: 24px;
-//     &--ecommers {
-//       @include cover("../icons/Ecommerce.svg");
-//       margin-bottom: 30px;
-//     }
-//     &--support {
-//       @include cover("../icons/Support.svg");
-//       margin-bottom: 30px;
-//     }
-//     &--corporate {
-//       @include cover("../icons/Corporate.svg");
-//       margin-bottom: 30px;
-//     }
-//     &--trust {
-//       @include cover("../icons/Trust.svg");
-//       margin-bottom: 30px;
-//     }
-//     &--protection {
-//       @include cover("../icons/Protection.svg");
-//       margin-bottom: 30px;
-//     }
-//     &--contr {
-//       @include cover("../icons/Contr.svg");
-//       margin-bottom: 30px;
-//     }
-//   }  
-//   &__title {
-//     @include font(700, 22,27);
-//     color: #24A3FF;
-//     margin-bottom: 15px;
-//   }
-//   &__description {
-//     @include font(400, 16, 26);
-//     color: #FFFFFF;
-//   }
-//   @media (min-width: 768px) {
-//     width: calc(50% - 30px);
-//   }
-//   @media (min-width: 1024px) {
-//     width: calc(33.33% - 40px);
-//   }
-// }
+.team_person {
+  margin-bottom: 6px;
+  @include font (700, 16, 20);
+  color: #B3B3BA;
+}
 
-// .logoTable__link {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   height: 120px;
-//   &:nth-child(n+7) {
-//     display: none;
-//   }
-//   &:nth-child(n) {
-//     @media (min-width: 768px) {
-//       display: flex;
-//       width: 33.33%;
-//     } 
-//   }
-//   &:nth-child(n) {
-//     @media (min-width: 1024px) {
-//       width: 25%;
-//     }
-//   }
-//   &:nth-child(1) {
-//     @media (min-width: 1720px) {
-//       border-radius: 12px 0px 0px 0px;
-//     }
-//   }
-//   &:nth-child(4) {
-//     @media (min-width: 1720px) {
-//       border-radius: 0px 12px 0px 0px;
-//     }
-//   }
-//   &:nth-child(9) {
-//     @media (min-width: 1720px) {
-//       border-radius: 0px 0px 0px 12px;
-//     }
-//   }
-//   &:nth-child(12) {
-//     @media (min-width: 1720px) {
-//       border-radius: 0px 0px 12px 0px;
-//     }
-//   }
-// }
+.team_position {
+  display: block;
+  @include font (400, 14, 22);
+  color: #B3B3BA;
+}
 
-// .logoTable {
-//   max-width: 1720px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+// PUBLICATIONS section
+.publications {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 62px;
+  background-color: #F5F5FA;
+  // border-bottom: 2px solid #E6E6F0;
+}
 
-// @media (min-width: 768px) {
-//   .logoTable {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-// }
+.publications_link {
+  margin-bottom: 5px;
+}
 
-// .hillel_link {
-//   background-color: #1C4280;
-// }
+.publications_title {
+  margin-bottom: 30px;
+}
 
-// .wannabiz_link {
-//   background-color: #143646;
-// }
+.block {
+  max-width: 500px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding-bottom: 30px;
+  &__img {
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 30px;
+    }
+  &__title {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: block;
+    @include font (700, 16, 20);
+    color: #24A3FF;
+    margin-bottom: 15px;
+  }
+  &__date {
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    @include font (700, 12, 16);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B3B3BA;
+    margin-bottom: 15px;
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border: 2px solid #E6E6F0;
+    }
+  }
+  &__description {
+    margin-left: 30px;
+    margin-right: 30px;
+    @include font (400, 14, 22);
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    &:nth-child(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      max-width: none;
+    }
+  }
+}
 
-// .tapgerine_link {
-//   background-color: #F48B30;
-// }
+.associate__img {
+  @include cover ('../images/Associate.jpg');
+}
 
-// .look_link {
-//   background: #9E4DC3;
-// }
+.gdpr__img {
+  @include cover ('../images/GDPR.jpg');
+}
 
-// .orange_link {
-//   background-color: #FD9339;
-// }
+.testament__img {
+  @include cover ('../images/Testament.jpg');
+      @media (min-width: 768px) {
+        background-size: cover;
+      }
+}
 
-// .adt_link {
-//   background-color: #E2E2E4;
-// }
-
-// .clikky_link {
-//   background-color: #C71C36;
-// }
-
-// .eco_link {
-//   background-color: #DCF3F9;
-// }
-
-// .infratek_link {
-//   background: #EAEAEA;
-// }
-
-// .city_link {
-//   background-color: #282240;
-// }
-
-// .art_link {
-//   background-color: #1D4568;
-// }
-
-// .ulti_link {
-//   background-color: #000000;
-// }
+.publications_blocks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 30px;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+  }
+}
