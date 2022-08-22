@@ -1,0 +1,103 @@
+@use '../mixins' as *;
+
+.team {
+  margin-bottom: 106px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    width: 648px;
+  }
+  @media (min-width: 1024px) {
+    width: 904px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1440px) {
+    width: 1600px;
+  }
+}
+
+.team_img1 {
+  max-width: 648px;
+  height: 500px;
+  background-image: url('../fotos/Team-Tiny.jpg');
+  border-radius: 12px 12px 0px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 768px) {
+    width: 648px;
+  }
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 528px;
+    border-radius: 12px 0px 0px 12px;
+  }
+  @media (min-width: 1440px) {
+    height: 344px;
+  }
+  @media (min-width: 1920px) {
+    height: 298px;    
+  }
+}
+
+.team_container {
+  background: #F5F5FA;
+  border-radius: 0 0 12px 12px;
+  padding: 30px;
+  max-width: 648px;
+  @media (min-width: 1024px) {
+    width: 504px;
+    border-radius: 0px 12px 12px 0px;
+  }
+  @media (min-width: 1440px) {
+    min-width: 920px;
+  }
+  @media (min-width: 1920px) {
+    min-width: 1200px;
+  }
+}
+
+.team_link {
+  margin-bottom: 5px;
+  display: flex;
+  color: #24A3FF;
+  @include font (700, 14, 17);
+  svg {
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  &:hover {
+    color: red;
+  }
+  &:hover path {
+    stroke: red;
+  }
+}
+
+.team_description {
+  margin-bottom: 30px;
+  @include font (700, 38, 46);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.team_person {
+  margin-bottom: 6px;
+  @include font (700, 16, 20);
+  color: #B3B3BA;
+}
+
+.team_position {
+  display: block;
+  @include font (400, 14, 22);
+  color: #B3B3BA;
+}
