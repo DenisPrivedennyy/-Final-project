@@ -226,6 +226,7 @@ body {
 }
 
 .container {
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -351,6 +352,25 @@ body {
   color: #B3B3BA;
 }
 
+.slider {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 15px;
+}
+.slider_item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #24A3FF;
+  opacity: 0.2;
+  border: none;
+}
+.slider_active {
+  opacity: 1;
+}
+
 .logoTable {
   max-width: 1720px;
   margin-left: auto;
@@ -379,7 +399,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .logoTable {
+  .logoTable_cards {
     display: flex;
     flex-wrap: wrap;
   }
@@ -479,7 +499,6 @@ body {
 }
 
 .block {
-  max-width: 500px;
   background: #FFFFFF;
   border-radius: 8px;
   padding-bottom: 30px;
@@ -538,6 +557,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-image: url("../images/Associate.jpg");
+  background-size: cover;
 }
 
 .gdpr__img {
@@ -545,6 +565,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-image: url("../images/GDPR.jpg");
+  background-size: cover;
 }
 
 .testament__img {
@@ -552,6 +573,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-image: url("../images/Testament.jpg");
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .testament__img {

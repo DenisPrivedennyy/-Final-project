@@ -7,9 +7,6 @@
   &_title {
     margin-bottom: 30px;
     @include font(700, 14, 17);
-    // font-weight: 700;
-    // font-size: 14px;
-    // line-height: 17px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #323264;
@@ -29,7 +26,7 @@
 }
 
 @media (min-width: 768px) {
-  .logoTable {
+  .logoTable_cards {
     display: flex;
     flex-wrap: wrap;
   }
