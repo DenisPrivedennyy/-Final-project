@@ -49,11 +49,12 @@
 
 .hlegal_menu {
   width: 1003px;
-  margin-left: 30px;
+  // margin-left: 30px;
+  padding-right: 0;
   margin-bottom: 30px;
   display: flex;
   column-gap: 30px;
-  overflow-x: scroll;
+  overflow-x: auto;
   &_link {
     display: inline-block;
     @include font (700, 30, 37);
@@ -63,21 +64,26 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    &:hover {
+      color: red;
+    }
   }
 }
 
-.hlegal_line {
-  margin-bottom: 30px;
-  // width: 4px;
-height: 4px;
+// .hlegal_line {
+//   margin-bottom: 30px;
+//   // width: 4px;
+// height: 4px;
 
-background: rgba(255, 255, 255, 0.3);
-// transform: rotate(90deg);
-}
+// background: rgba(255, 255, 255, 0.3);
+// // transform: rotate(90deg);
+// }
 
 .hlegal_block {
   margin-bottom: 30px;
   &_title {
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+    padding-top: 30px;
     margin-bottom: 30px;
     @include font (700, 20,24);
     color: #FFFFFF;
@@ -93,6 +99,9 @@ background: rgba(255, 255, 255, 0.3);
     margin-left: 0;
     margin-right: 0;
   }
+  .hlegal_menu {
+    width: 1246px;
+  }
   .hlegal_menu_link {
     @include font (700, 38, 46);
   }
@@ -104,30 +113,52 @@ background: rgba(255, 255, 255, 0.3);
 @media (min-width: 1024px) {
   .hlegal {
     width: 670px;
+    left: calc(50% - 670px/2);
   }
   .hlegal_container {
+    // width: 904px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-right: 60px;
+    justify-content: center;
+    // margin-left: 60px;
+    // margin-right: 60px;
   }
   .hlegal_menu {
     margin-left: 0;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    // width: 50%;
+    width: 437px;
     padding-right: 60px;
     row-gap: 30px;
     align-items: flex-end;
     border-right: 2px solid rgba(255, 255, 255, 0.3);
   }
-  .hlegal_line {
-    display: none;
-  }
+  // .hlegal_line {
+  //   display: none;
+  // }
   .hlegal_block {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 50%;
+    // width: 50%;
+    width: 467px;
     padding-left: 60px;
     border-left: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  .hlegal_block_title {
+      border-top: 0;
+      padding-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hlegal_block {
+    width: 643px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hlegal_block {
+    width: 923px;
   }
 }

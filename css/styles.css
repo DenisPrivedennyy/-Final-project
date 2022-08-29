@@ -101,11 +101,11 @@ body {
 
 .hlegal_menu {
   width: 1003px;
-  margin-left: 30px;
+  padding-right: 0;
   margin-bottom: 30px;
   display: flex;
   column-gap: 30px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .hlegal_menu_link {
   display: inline-block;
@@ -119,17 +119,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.hlegal_line {
-  margin-bottom: 30px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+.hlegal_menu_link:hover {
+  color: red;
 }
 
 .hlegal_block {
   margin-bottom: 30px;
 }
 .hlegal_block_title {
+  border-top: 4px solid rgba(255, 255, 255, 0.3);
+  padding-top: 30px;
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
@@ -148,6 +147,9 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
+  .hlegal_menu {
+    width: 1246px;
+  }
   .hlegal_menu_link {
     font-weight: 700;
     font-size: 38px;
@@ -162,31 +164,43 @@ body {
 @media (min-width: 1024px) {
   .hlegal {
     width: 670px;
+    left: calc(50% - 335px);
   }
   .hlegal_container {
     display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-right: 60px;
+    justify-content: center;
   }
   .hlegal_menu {
     margin-left: 0;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 437px;
     padding-right: 60px;
     row-gap: 30px;
     align-items: flex-end;
     border-right: 2px solid rgba(255, 255, 255, 0.3);
   }
-  .hlegal_line {
-    display: none;
-  }
   .hlegal_block {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 467px;
     padding-left: 60px;
     border-left: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  .hlegal_block_title {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .hlegal_block {
+    width: 643px;
+  }
+}
+@media (min-width: 1920px) {
+  .hlegal_block {
+    width: 923px;
   }
 }
 .cards {
@@ -310,6 +324,7 @@ body {
 
 .link {
   display: flex;
+  width: 90px;
   color: #24A3FF;
 }
 .link::after {
