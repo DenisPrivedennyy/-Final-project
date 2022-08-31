@@ -57,6 +57,13 @@ body {
   }
 }
 
+.header .contact_address {
+  display: none;
+}
+.header .social_logo {
+  display: none;
+}
+
 .hlegal {
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -633,7 +640,6 @@ body {
 .publications {
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 62px;
   background-color: #F5F5FA;
 }
 
@@ -745,5 +751,129 @@ body {
   .publications_blocks {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: none;
+  }
+}
+
+.footer {
+  background-color: #F5F5FA;
+  padding-bottom: 30px;
+}
+
+.footer_container {
+  padding-top: 30px;
+  border-top: 2px solid #E6E6F0;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  margin-bottom: 21px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+.address address {
+  font-style: normal;
+}
+
+.map_link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+.social .social_tel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #46466E;
+}
+.social .social_email {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24A3FF;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #B3B3BA;
+}
+
+@media (min-width: 768px) {
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .address {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-bottom: 21px;
+  }
+  .map_link {
+    display: flex;
+    align-items: center;
+  }
+  .map_link::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: #B3B3BA;
+    margin-right: 10px;
+  }
+  .social {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-self: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .social a {
+    display: flex;
+    align-items: center;
+  }
+  .social_tel::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: #B3B3BA;
+    margin-right: 10px;
+  }
+  .social_email::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: #B3B3BA;
+    margin-right: 10px;
+  }
+  .copyright {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
   }
 }
