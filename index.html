@@ -8,55 +8,61 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="wrapper">
-      <div class="header_container">
-        <div class="contacts">
-          <div class="conacts_lang">
-            <button class="contact_lang_btn">ук</button>
-            <button class="contact_lang_btn">рус</button>
-            <button class="contact_lang_btn contact_lang_btn-active">en</button>
-          </div>
-          <address class="contact_address">Kyiv, Mechnikova str., 14/1</address>
-          <a href="tel:0800211927">0800 211 927</a>
-          <a href="facebook.com" class="social_logo"><img src="" alt="facebook"></a>
-        </div>
-        <a href="index.html" class="logo"><img src="./logos/Logo.png" alt="logo"></a>
-      </div>
-      <nav class="nav">
-        <a href="#" class="nav_link">about us</a>
-        <a href="#" class="nav_link">service</a>
-        <a href="#" class="nav_link">team</a>
-        <a href="#" class="nav_link">publications</a>
-        <a href="#" class="nav_link">contact</a>
-      </nav>
-    </div>
-  </header>
   <main>
-    <!-- <div class="hlegal">
-      <header></header>
-      <h1 class="hlegal_title">
-        you legal solutions provider
-      </h1>
-      <div class="arrow_down">
-        <svg 
-          width="20" height="12" viewBox="0 0 20 12"   fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
-        </svg>
-      </div>
-    </div> -->
     <section class="service">
       <div class="hlegal">
-        <!-- <div class="hlegal_logo"></div> -->
+        <div class="header">
+          <div class="header_container_mobile">
+            <div class="lang_tel">
+              <div class="contacts_lang">
+                <button class="contact_lang_btn">ук</button>
+                <button class="contact_lang_btn">ру</button>
+                <button class="contact_lang_btn contact_lang_btn-active">en</button>
+              </div>
+              <a href="tel:0800211927" class="contact_tel">0800 211 927</a>
+            </div>
+            <div class="logo_menu">
+              <div>
+                <a href="index.html" class="logo"><img src="./logos/Logo.png" alt="logo"></a>
+              </div>
+              <div>
+                <button href="#" class="menu_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="header_container">
+              <div class="contacts">
+                <div class="conacts_lang">
+                  <button class="contact_lang_btn">ук</button>
+                  <button class="contact_lang_btn">рус</button>
+                  <button class="contact_lang_btn contact_lang_btn-active">en</button>
+                </div>
+                <address class="contact_address">Kyiv, Mechnikova str., 14/1</address>
+                <a href="tel:0800211927">0800 211 927</a>
+                <a href="facebook.com" class="social_logo"><img src="" alt="facebook"></a>
+              </div>
+              <a href="index.html" class="logo"><img src="./logos/Logo.png" alt="logo"></a>
+              <nav class="nav">
+                <a href="#" class="nav_link">about us</a>
+                <a href="#" class="nav_link">service</a>
+                <a href="#" class="nav_link">team</a>
+                <a href="#" class="nav_link">publications</a>
+                <a href="#" class="nav_link">contact</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        </header>
         <h1 class="hlegal_title">
           you legal solutions provider
         </h1>
-        <a href="#" class="hlegal_arrow">
+        <button id="open_form" class="hlegal_arrow">
           <svg 
             width="20" height="12" viewBox="0 0 20 12"   fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
           </svg>
-        </a>
+        </button>
       </div>
       <div class="wrapper">
       <div class="hlegal_container">
@@ -267,5 +273,53 @@
       </div>
     </div>
   </footer>
+  <div class="form">
+    <form class='form_block'
+          action="https://fom.in.ua/echo" 
+          method="post" 
+          autocomplete="on">
+    <!-- <div class='form_block'> -->
+      <p class="form_title">We would like to help you</p>
+      <input class="form_name"
+             type="name" 
+             name="user-name"  
+             required
+             placeholder="Name">
+      <textarea class="textarea"
+                name="comment" 
+                id="comment"
+                placeholder="Message">
+      </textarea>       
+      <!-- <input type="text"> -->
+      <p class="form_answer">How to answer you?</p>
+      <input class="form_tel"
+             type="tel"
+             name="tel"
+             required
+             placeholder="Phone number">
+      <input class="form_email"
+             type="email" 
+             name="user-email" id="email" 
+             placeholder="Email" 
+             required>
+      <button type="submit" class="send_buttom">Send message</button>
+      <button id="close_form" class="close_button" type="button">
+        <img src="./images/icon_close.png" alt="X-close">
+      </button>
+    </form>
+  </div>
+  <script>
+    const form = document.querySelector('.form')
+    const openButton = document.querySelector('#open_form')
+    const closeButton = document.querySelector('#close_form')
+
+    openButton.addEventListener('click', ()=>{
+      form.classList.add('form_showed')
+    })
+
+    closeButton.addEventListener('click', ()=>{
+      form.classList.remove('form_showed')
+    })
+  </script>
 </body>
 </html>
